@@ -1,0 +1,22 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract Employee{
+    string employerid;
+    string name;
+    int age;
+    int salary;
+    string dateofjoining;
+    string addrs;
+    int phnumber;
+    function Employee(string newemployerid,string newname,int newage,int newsalary,string newdateofjoining,string newaddrs,int newphnumber) public {
+        employerid=newemployerid;
+        name=newname;
+        age=newage;
+        salary=newsalary;
+        dateofjoining=newdateofjoining;
+        addrs=newaddrs;
+        phnumber=newphnumber;
+         }
+         function getCarInvoice() public view returns (string,string,int,int,string,string,int) {
+         return (employerid, name, age, salary, dateofjoining, addrs, phnumber);
+         }
+} 
